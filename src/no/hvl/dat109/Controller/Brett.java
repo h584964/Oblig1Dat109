@@ -11,6 +11,10 @@ public class Brett {
   	  //Brettet eier terningen
       private Map<Integer, Integer> brett;
 
+      /**
+       * 
+       * @param antallRuter på brettet i stigespillet.
+       */
       public Brett(int antallRuter) {
          brett = new HashMap<Integer, Integer>();
   
@@ -18,8 +22,10 @@ public class Brett {
       }
   
      
-  
-    //Iterasjon 2: Stiger og slanger
+    /**
+     * Hvor stiger og slanger er.
+     */
+    
       private void setup() {
           brett.put(5,13);
           brett.put(14,2);
@@ -27,7 +33,13 @@ public class Brett {
           brett.put(70,90);
           brett.put(15,8);
           brett.put(99,1);
-      }  
+      } 
+      
+      /**
+       * 
+       * @param rutnr
+       * @return hvilken rutenr brikken er på. 
+       */
       public int spesRuteverdi(int rutnr) {
 
         Integer nyrute = brett.get(rutnr);

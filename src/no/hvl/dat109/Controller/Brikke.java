@@ -10,17 +10,26 @@ public class Brikke {
 	private String farge;
 	private int rutenr;
 
+  /**
+   * 
+   * @param farge til brikken
+   */
 
 	public Brikke(String farge) {
 		this.farge = farge;
 		rutenr = 1;
 	
 	}
+  /**
+   * 
+   * @param verdi brikken får etter å ha trillet.
+   * Brettet er 100 ruter så verdien kan ikke gå over. 
+   */
   public void flytt(int verdi){
     if((rutenr + verdi) <= 100)
     rutenr += verdi;
   }
-
+ 
 	public String getFarge() {
 		return farge;
 	}
@@ -33,16 +42,6 @@ public class Brikke {
 		this.rutenr = rutenr;
 	}
 
-  /* public void flytt(int terningVerdi) {
-		if ((rutenr + terningVerdi) <= 100) {
-			rutenr += terningVerdi;
-
-			// Sjekke om brikke landet pÃ¥ stige/slange
-			int nyverdi = brett.spesRuteverdi(rutenr);
-			if (nyverdi > 0) {
-				rutenr = nyverdi;
-			}
-		}
-	} */
-
+ 
+  
 }

@@ -13,6 +13,10 @@ public class Stigespill {
 	private List<Brikke> brikker;
 	private Brett brett;
 
+  /**
+   *  Dekalerer objektvariabler til stigespillet
+   */
+
 	public Stigespill() {
 		brikker = new ArrayList<Brikke>(2);
 		Brikke nyBrikke = new Brikke("Blå");
@@ -48,6 +52,13 @@ public class Stigespill {
 
 		// for alle spillerne, gjÃ¸r trekk
 	}
+
+  /**
+   * 
+   * @param brikke 
+   * Gjør et trekk med brikke som paramenter (et trekk kan involvere flere trill av terning)
+   * 
+   */
 
 	private void trekk(Brikke brikke) {
     int verdi = 0;

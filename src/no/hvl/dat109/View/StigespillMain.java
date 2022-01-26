@@ -7,6 +7,11 @@ import no.hvl.dat109.Controller.Stigespill;
  * 
  */ 
 public class StigespillMain {
+
+  /**
+   * 
+   * @param args kjøring av Stigespillet
+   */
   public static void main(String[] args) {
     Stigespill stigespill = new Stigespill();
     stigespill.spill();
