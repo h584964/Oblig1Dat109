@@ -1,7 +1,7 @@
 package no.hvl.dat109.Controller;
 
 public class Brikke {
-  private Brett brett;
+
 	private String farge;
 	private int rutenr;
 
@@ -9,20 +9,12 @@ public class Brikke {
 	public Brikke(String farge) {
 		this.farge = farge;
 		rutenr = 1;
-		brett = new Brett(100);
+	
 	}
-
-	public void flytt(int terningVerdi) {
-		if ((rutenr + terningVerdi) <= 100) {
-			rutenr += terningVerdi;
-
-			// Sjekke om brikke landet pÃ¥ stige/slange
-			int nyverdi = brett.spesRuteverdi(rutenr);
-			if (nyverdi > 0) {
-				rutenr = nyverdi;
-			}
-		}
-	}
+  public void flytt(int verdi){
+    if((rutenr + verdi) <= 100)
+    rutenr += verdi;
+  }
 
 	public String getFarge() {
 		return farge;
@@ -35,5 +27,17 @@ public class Brikke {
 	public void setRutenr(int rutenr) {
 		this.rutenr = rutenr;
 	}
+
+  /* public void flytt(int terningVerdi) {
+		if ((rutenr + terningVerdi) <= 100) {
+			rutenr += terningVerdi;
+
+			// Sjekke om brikke landet pÃ¥ stige/slange
+			int nyverdi = brett.spesRuteverdi(rutenr);
+			if (nyverdi > 0) {
+				rutenr = nyverdi;
+			}
+		}
+	} */
 
 }

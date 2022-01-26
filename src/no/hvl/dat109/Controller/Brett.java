@@ -5,10 +5,10 @@ import java.util.Map;
 
 public class Brett {
   	  //Brettet eier terningen
-      private Map<Rute, Rute> brett;
+      private Map<Integer, Integer> brett;
 
       public Brett(int antallRuter) {
-         brett = new HashMap<Rute, Rute>();
+         brett = new HashMap<Integer, Integer>();
   
          setup();
       }
@@ -17,18 +17,21 @@ public class Brett {
   
     //Iterasjon 2: Stiger og slanger
       private void setup() {
-          brett.put(new Rute(5), new Rute(13));
-          brett.put(new Rute(15), new Rute(8));
-          brett.put(new Rute(99), new Rute(1));
-      }
-  
-      public int spesRuteverdi(int rutenr) {
-          Rute nyrute = brett.get(new Rute(rutenr));
-  
-          int nyrutenr = 0;
-          if (nyrute != null)
-              nyrutenr = nyrute.getPos();
-  
-          return nyrutenr;
+          brett.put(5,13);
+          brett.put(14,2);
+          brett.put(58,32);
+          brett.put(70,90);
+          brett.put(15,8);
+          brett.put(99,1);
+      }  
+      public int spesRuteverdi(int rutnr) {
+
+        Integer nyrute = brett.get(rutnr);
+        if (nyrute == null)
+          return rutnr;
+
+        System.out.println("Brikken landet på en stige/slange, og flyttes til: " + nyrute);
+        return nyrute;
+         
       }
 }

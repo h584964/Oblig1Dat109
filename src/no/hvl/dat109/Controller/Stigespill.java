@@ -9,7 +9,7 @@ public class Stigespill {
 	private Brett brett;
 
 	public Stigespill() {
-		brikker = new ArrayList<Brikke>(3);
+		brikker = new ArrayList<Brikke>(2);
 		Brikke nyBrikke = new Brikke("Blå");
 		Brikke nyBrikke1 = new Brikke("Grønn");
 
@@ -45,36 +45,31 @@ public class Stigespill {
 	}
 
 	private void trekk(Brikke brikke) {
+    int verdi = 0;
+    int antallseksere = 0;
+		do {
+      //trille terning og flytte
+      verdi = terning.trill();
+      if (verdi == 6)
+        antallseksere++;
+      System.out.println(brikke.getFarge() + " brikke trillet: " + verdi);
+       
+      //Hvis antallseksere == 3, flytt til 1
+       if (antallseksere == 3) {
+         System.out.println("Ånei, 3 seksere betyr tilbake til start");
+         brikke.setRutenr(1);
+       }
+       else {
 
-		int antallseksere = 0;
-		int verdi = terning.trill();
+       
+          brikke.flytt(verdi);
+          System.out.println(brikke.getFarge() + " brikke landet på rute: " + brikke.getRutenr());
 
-		System.out.println(brikke.getFarge() + " brikke kastet terning: " + verdi);
-		brikke.flytt(verdi);
-
-		System.out.println(brikke.getFarge() + " brikke LANDET PÃ… RUTE: [" + brikke.getRutenr() + "]");
-
-		while (verdi == 6) {
-			antallseksere++;
-
-			verdi = terning.trill();
-
-			if (antallseksere == 3) {
-				System.out.println(brikke.getFarge() + " brikke starter på start igjen");
-
-				brikke.setRutenr(1);
-
-			} else {
-				System.out.println(brikke.getFarge() + " Triller på nytt");
-
-				System.out.println(brikke.getFarge() + " brikke kastet terning: " + verdi);
-
-				brikke.flytt(verdi);
-				System.out.println(brikke.getFarge() + " brikke LANDET PÃ… RUTE: [" + brikke.getRutenr() + "]");
-
-			}
-
-		}
-
+          //Sjekke om stige/slange
+          brikke.setRutenr(brett.spesRuteverdi(brikke.getRutenr()));
+       }
+    }
+    while (verdi == 6 && antallseksere < 3);
+    //Så lenge terning == 6, og mindre enn 3 seksere
 	}
 }

@@ -1,7 +1,7 @@
 package no.hvl.dat109.Controller;
 
 public class Rute {
-  private int pos;
+/*   private int pos;
 
 	public Rute(int pos) {
 		this.pos = pos;
@@ -24,6 +24,6 @@ public class Rute {
 	public int hashCode() {
 		Integer temp = pos;
 		return temp.hashCode();
-	}
+	} */
 }
 
