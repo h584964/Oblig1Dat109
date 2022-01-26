@@ -3,6 +3,11 @@ package no.hvl.dat109.Controller;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Johan og Jørgen
+ * 
+ */ 
+
 public class Stigespill {
   private Terning terning;
 	private List<Brikke> brikker;

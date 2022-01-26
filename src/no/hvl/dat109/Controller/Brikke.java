@@ -1,5 +1,10 @@
 package no.hvl.dat109.Controller;
 
+/**
+ * @author Johan og Jørgen
+ * 
+ */ 
+
 public class Brikke {
 
 	private String farge;

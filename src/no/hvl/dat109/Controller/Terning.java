@@ -2,6 +2,10 @@ package no.hvl.dat109.Controller;
 
 import java.util.Random;
 
+/**
+ * @author Johan og Jørgen
+ * 
+ */ 
 public class Terning {
   private Random rand;
 

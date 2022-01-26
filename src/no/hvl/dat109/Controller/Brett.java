@@ -3,6 +3,10 @@ package no.hvl.dat109.Controller;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author Johan og Jørgen
+ * 
+ */ 
 public class Brett {
   	  //Brettet eier terningen
       private Map<Integer, Integer> brett;
