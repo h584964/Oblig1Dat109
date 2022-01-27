@@ -72,18 +72,27 @@ public class Stigespill {
        
       //Hvis antallseksere == 3, flytt til 1
        if (antallseksere == 3) {
-         System.out.println("Ånei, 3 seksere betyr tilbake til start");
+         System.out.println("Ånei, " + brikke.getFarge() + " trillet 3 seksere på rad og må flytte til 1");
          brikke.setRutenr(1);
        }
        else {
 
        
           brikke.flytt(verdi);
-          System.out.println(brikke.getFarge() + " brikke landet på rute: " + brikke.getRutenr());
+          int rute = brikke.getRutenr();
+          System.out.println(brikke.getFarge() + " brikke landet på rute: " + rute);
 
           //Sjekke om stige/slange
-          brikke.setRutenr(brett.spesRuteverdi(brikke.getRutenr()));
-       }
+          int stigeslange = brett.spesRuteverdi(rute);
+          if (stigeslange > rute) {
+            System.out.println(brikke.getFarge() + " brikke landet på en stige og går til rute" + stigeslange);
+            brikke.setRutenr(stigeslange);
+          }
+          else if (stigeslange < rute) {
+            System.out.println("Der var det en slange, " + brikke.getFarge() + " flytter til rute " + stigeslange);
+            brikke.setRutenr(stigeslange);
+          }
+          }
     }
     while (verdi == 6 && antallseksere < 3);
     //Så lenge terning == 6, og mindre enn 3 seksere

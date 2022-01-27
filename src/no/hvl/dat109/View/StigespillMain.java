@@ -7,6 +7,7 @@ import no.hvl.dat109.Controller.Stigespill;
  * 
  */ 
 public class StigespillMain {
+  
 
   /**
    * 

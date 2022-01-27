@@ -33,7 +33,11 @@ public class Brett {
           brett.put(70,90);
           brett.put(15,8);
           brett.put(99,1);
+
+         
       } 
+
+      
       
       /**
        * 
@@ -46,7 +50,6 @@ public class Brett {
         if (nyrute == null)
           return rutnr;
 
-        System.out.println("Brikken landet på en stige/slange, og flyttes til: " + nyrute);
         return nyrute;
          
       }

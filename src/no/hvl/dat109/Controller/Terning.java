@@ -14,6 +14,7 @@ public class Terning {
 	    public Terning() {
 	        rand = new Random();
 	    }
+
       /**
        * 
        * @return random verdi 1-6
@@ -21,4 +22,5 @@ public class Terning {
 	    public int trill() {
 	        return rand.nextInt(6) + 1;
 	    }
+
 }
