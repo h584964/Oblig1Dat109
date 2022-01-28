@@ -31,7 +31,7 @@ public class Stigespill {
 	}
 
 	/**
-	 * Spiller en runde i stigspillet
+	 * Spiller en runde i stigspillet. Alle spillere spiller en runde i stigespillet
 	 */
 
 	public void spill() {
@@ -50,7 +50,7 @@ public class Stigespill {
 			}
 		}
 
-		// for alle spillerne, gjÃ¸r trekk
+	
 	}
 
   /**
@@ -83,14 +83,14 @@ public class Stigespill {
           System.out.println(brikke.getFarge() + " brikke landet på rute: " + rute);
 
           //Sjekke om stige/slange
-          int stigeslange = brett.spesRuteverdi(rute);
-          if (stigeslange > rute) {
-            System.out.println(brikke.getFarge() + " brikke landet på en stige og går til rute" + stigeslange);
-            brikke.setRutenr(stigeslange);
+          int nyrute = brett.spesRuteverdi(rute);
+          if (nyrute > rute) {
+            System.out.println(brikke.getFarge() + " brikke landet på en stige og går til rute" + nyrute);
+            brikke.setRutenr(nyrute);
           }
-          else if (stigeslange < rute) {
-            System.out.println("Der var det en slange, " + brikke.getFarge() + " flytter til rute " + stigeslange);
-            brikke.setRutenr(stigeslange);
+          else if (nyrute < rute) {
+            System.out.println("Der var det en slange, " + brikke.getFarge() + " flytter til rute " + nyrute;
+            brikke.setRutenr(nyrute);
           }
           }
     }
